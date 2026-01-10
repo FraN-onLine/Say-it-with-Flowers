@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bncxdntdwv31b"]
+[gd_scene load_steps=5 format=3 uid="uid://bncxdntdwv31b"]
 
 [ext_resource type="Texture2D" uid="uid://2lhe87nidm4h" path="res://Assets/Characters/Josa.png" id="1_4i1j6"]
 [ext_resource type="Script" uid="uid://bdr7ns87rgexw" path="res://UI/dialogue_box.gd" id="1_ys8mp"]
 [ext_resource type="FontFile" uid="uid://ci73tgdvfkr2b" path="res://Assets/fs-pixel-sans-unicode-regular.ttf" id="2_ys8mp"]
+[ext_resource type="FontFile" uid="uid://b1smo7488bnqg" path="res://Assets/Silkscreen-Bold.ttf" id="4_5mryu"]
 
 [node name="DialogueBox" type="CanvasLayer" groups=["dialog_box"]]
 script = ExtResource("1_ys8mp")
@@ -40,7 +41,10 @@ offset_top = 406.0
 offset_right = 1119.0
 offset_bottom = 618.0
 theme_override_fonts/normal_font = ExtResource("2_ys8mp")
+theme_override_fonts/bold_font = ExtResource("4_5mryu")
 theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/bold_font_size = 28
+bbcode_enabled = true
 text = "UR MOM DED"
 
 [node name="Next" type="Button" parent="."]
@@ -62,7 +66,7 @@ theme_override_font_sizes/font_size = 32
 text = "Assemble Bouquet"
 
 [node name="Option1" type="Button" parent="."]
-offset_left = 943.0
+offset_left = 795.0
 offset_top = 527.0
 offset_right = 1126.0
 offset_bottom = 569.0
@@ -71,7 +75,7 @@ theme_override_font_sizes/font_size = 32
 text = "Option 1"
 
 [node name="Option2" type="Button" parent="."]
-offset_left = 943.0
+offset_left = 793.0
 offset_top = 575.0
 offset_right = 1126.0
 offset_bottom = 617.0
