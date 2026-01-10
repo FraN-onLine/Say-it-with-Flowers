@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="Say It With Flowers"
+run/main_scene="uid://bncxdntdwv31b"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+OrderManager="*res://Orders/order_manager.gd"
+
+[global_group]
+
+dialog_box=""
 
 [rendering]
 

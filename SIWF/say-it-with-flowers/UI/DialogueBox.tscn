@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://bdr7ns87rgexw" path="res://UI/dialogue_box.gd" id="1_ys8mp"]
 [ext_resource type="FontFile" uid="uid://ci73tgdvfkr2b" path="res://Assets/fs-pixel-sans-unicode-regular.ttf" id="2_ys8mp"]
 
-[node name="DialogueBox" type="CanvasLayer"]
+[node name="DialogueBox" type="CanvasLayer" groups=["dialog_box"]]
 script = ExtResource("1_ys8mp")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -53,10 +53,33 @@ theme_override_font_sizes/font_size = 32
 text = "NEXT"
 
 [node name="Assemble" type="Button" parent="."]
-offset_left = 36.0
-offset_top = 334.0
-offset_right = 148.0
-offset_bottom = 376.0
+offset_left = 943.0
+offset_top = 574.0
+offset_right = 1126.0
+offset_bottom = 616.0
 theme_override_fonts/font = ExtResource("2_ys8mp")
 theme_override_font_sizes/font_size = 32
 text = "Assemble Bouquet"
+
+[node name="Option1" type="Button" parent="."]
+offset_left = 943.0
+offset_top = 527.0
+offset_right = 1126.0
+offset_bottom = 569.0
+theme_override_fonts/font = ExtResource("2_ys8mp")
+theme_override_font_sizes/font_size = 32
+text = "Option 1"
+
+[node name="Option2" type="Button" parent="."]
+offset_left = 943.0
+offset_top = 575.0
+offset_right = 1126.0
+offset_bottom = 617.0
+theme_override_fonts/font = ExtResource("2_ys8mp")
+theme_override_font_sizes/font_size = 32
+text = "Option 2"
+
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Assemble" to="." method="_on_Assemble_pressed"]
+[connection signal="pressed" from="Option1" to="." method="_on_Option1_pressed"]
+[connection signal="pressed" from="Option2" to="." method="_on_Option2_pressed"]
