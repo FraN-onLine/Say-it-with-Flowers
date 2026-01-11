@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bprih8qjtvlq7"]
+[gd_scene load_steps=2 format=3 uid="uid://bprih8qjtvlq7"]
 
 [ext_resource type="FontFile" uid="uid://ci73tgdvfkr2b" path="res://Assets/fs-pixel-sans-unicode-regular.ttf" id="1_n0foe"]
-[ext_resource type="Texture2D" uid="uid://2n2fubghyr1m" path="res://Assets/Flowers/RedChrysanthemum.png" id="2_qcyof"]
 
 [node name="AssembleMenu" type="CanvasLayer"]
 
@@ -26,9 +25,8 @@ offset_top = 153.0
 offset_right = 1081.0
 offset_bottom = 534.0
 
-[node name="TextureRect" type="TextureRect" parent="Flower_Box"]
+[node name="FlowerList" type="VBoxContainer" parent="Flower_Box"]
 layout_mode = 2
-texture = ExtResource("2_qcyof")
 
 [node name="Arrangement1" type="Panel" parent="."]
 offset_left = 58.0
@@ -60,7 +58,7 @@ offset_top = 217.0
 offset_right = 752.0
 offset_bottom = 328.0
 
-[node name="Option1" type="Button" parent="."]
+[node name="Assemble" type="Button" parent="."]
 offset_left = 256.0
 offset_top = 384.0
 offset_right = 587.0

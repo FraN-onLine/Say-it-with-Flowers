@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://fgd545r8aso7"]
+
+[ext_resource type="Texture2D" uid="uid://2n2fubghyr1m" path="res://Assets/Flowers/RedChrysanthemum.png" id="1_ipc4s"]
+[ext_resource type="Script" uid="uid://44ho3r7ousl0" path="res://Flowers/flower_icon.gd" id="2_p62sn"]
+
+[node name="TextureRect" type="TextureRect"]
+custom_minimum_size = Vector2(92, 92)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_ipc4s")
+script = ExtResource("2_p62sn")

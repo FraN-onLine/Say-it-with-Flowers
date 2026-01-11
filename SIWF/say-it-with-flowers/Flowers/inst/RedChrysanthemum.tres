@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Flower" load_steps=3 format=3 uid="uid://dawi3x6dssqmp"]
+
+[ext_resource type="Texture2D" uid="uid://2n2fubghyr1m" path="res://Assets/Flowers/RedChrysanthemum.png" id="1_4vw1a"]
+[ext_resource type="Script" uid="uid://bwulupgd8gl7b" path="res://Flowers/flower.gd" id="1_g6rho"]
+
+[resource]
+script = ExtResource("1_g6rho")
+id = 0
+name = "Red Chrysanthemum"
+image = ExtResource("1_4vw1a")
+description = "Love"
+meaning = "Love"
+is_meaning_unlocked = true
