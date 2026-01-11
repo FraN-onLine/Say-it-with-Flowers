@@ -7,7 +7,7 @@
 script = ExtResource("1_g6rho")
 id = 0
 name = "Red Chrysanthemum"
-image = ExtResource("1_4vw1a")
+texture = ExtResource("1_4vw1a")
 description = "Love"
 meaning = "Love"
 is_meaning_unlocked = true

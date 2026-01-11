@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bprih8qjtvlq7"]
+[gd_scene load_steps=4 format=3 uid="uid://bprih8qjtvlq7"]
 
 [ext_resource type="FontFile" uid="uid://ci73tgdvfkr2b" path="res://Assets/fs-pixel-sans-unicode-regular.ttf" id="1_n0foe"]
+[ext_resource type="Script" uid="uid://cv3d6n7pfui0" path="res://UI/assemble_menu.gd" id="1_qcyof"]
+[ext_resource type="Script" uid="uid://cxvmt0apvj4lp" path="res://UI/ArrangementSlot.gd" id="3_52kt2"]
 
 [node name="AssembleMenu" type="CanvasLayer"]
+script = ExtResource("1_qcyof")
 
 [node name="Flowers" type="Panel" parent="."]
 offset_left = 780.0
@@ -29,40 +32,45 @@ offset_bottom = 534.0
 layout_mode = 2
 
 [node name="Arrangement1" type="Panel" parent="."]
-offset_left = 58.0
-offset_top = 214.0
-offset_right = 171.0
-offset_bottom = 325.0
+offset_left = 105.0
+offset_top = 240.0
+offset_right = 218.0
+offset_bottom = 351.0
+script = ExtResource("3_52kt2")
 
 [node name="Arrangement2" type="Panel" parent="."]
-offset_left = 195.0
-offset_top = 216.0
-offset_right = 308.0
-offset_bottom = 327.0
+offset_left = 227.0
+offset_top = 240.0
+offset_right = 340.0
+offset_bottom = 351.0
+script = ExtResource("3_52kt2")
 
 [node name="Arrangement3" type="Panel" parent="."]
-offset_left = 352.0
-offset_top = 215.0
-offset_right = 465.0
-offset_bottom = 326.0
+offset_left = 348.0
+offset_top = 240.0
+offset_right = 461.0
+offset_bottom = 351.0
+script = ExtResource("3_52kt2")
 
 [node name="Arrangement4" type="Panel" parent="."]
-offset_left = 496.0
-offset_top = 218.0
-offset_right = 609.0
-offset_bottom = 329.0
+offset_left = 471.0
+offset_top = 240.0
+offset_right = 584.0
+offset_bottom = 351.0
+script = ExtResource("3_52kt2")
 
 [node name="Arrangement5" type="Panel" parent="."]
-offset_left = 639.0
-offset_top = 217.0
-offset_right = 752.0
-offset_bottom = 328.0
+offset_left = 593.0
+offset_top = 240.0
+offset_right = 706.0
+offset_bottom = 351.0
+script = ExtResource("3_52kt2")
 
 [node name="Assemble" type="Button" parent="."]
-offset_left = 256.0
-offset_top = 384.0
-offset_right = 587.0
-offset_bottom = 424.0
+offset_left = 234.0
+offset_top = 382.0
+offset_right = 565.0
+offset_bottom = 422.0
 theme_override_fonts/font = ExtResource("1_n0foe")
 theme_override_font_sizes/font_size = 32
 text = "Assemble"
