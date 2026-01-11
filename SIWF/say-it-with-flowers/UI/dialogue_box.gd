@@ -82,9 +82,6 @@ func _start_typing(text: String) -> void:
 	dialog_label.text = ""
 	_typing = true
 
-	# Disable input buttons while typing
-	_set_buttons_disabled(true)
-
 	_typing_tween = create_tween()
 	for i in _full_text.length():
 		_typing_tween.tween_callback(
@@ -95,10 +92,10 @@ func _start_typing(text: String) -> void:
 	_typing_tween.tween_callback(_finish_typing)
 
 
+
 func _finish_typing() -> void:
 	_typing = false
 	dialog_label.text = _full_text
-	_set_buttons_disabled(false)
 
 
 func _set_buttons_disabled(disabled: bool) -> void:
