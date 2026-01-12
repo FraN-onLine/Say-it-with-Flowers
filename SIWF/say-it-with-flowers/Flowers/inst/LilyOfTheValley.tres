@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Flower" load_steps=3 format=3 uid="uid://1bx4q73dpaow"]
+
+[ext_resource type="Script" uid="uid://bwulupgd8gl7b" path="res://Flowers/flower.gd" id="1_wuwxf"]
+[ext_resource type="Texture2D" uid="uid://cmxun7ftug0kp" path="res://Assets/Flowers/LilyOfTheValley.png" id="2_ksnco"]
+
+[resource]
+script = ExtResource("1_wuwxf")
+id = 1
+name = "Lily of The Valley"
+texture = ExtResource("2_ksnco")
+description = ""
+meaning = "Lost"
+is_meaning_unlocked = false
+metadata/_custom_type_script = "uid://bwulupgd8gl7b"

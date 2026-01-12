@@ -1,4 +1,4 @@
 extends Node
 #knowledge manager, any info obtained by player, expected of player and states or options for later on
-var unlocked_flowers: Array = ["res://Flowers/inst/RedChrysanthemum.tres"]
+var unlocked_flowers: Array = ["res://Flowers/inst/RedChrysanthemum.tres", "res://Flowers/inst/LilyOfTheValley.tres"]
 var expected_arrangement: Array = []

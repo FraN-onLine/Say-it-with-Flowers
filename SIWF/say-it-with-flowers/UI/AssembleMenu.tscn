@@ -22,6 +22,15 @@ theme_override_fonts/font = ExtResource("1_n0foe")
 theme_override_font_sizes/font_size = 64
 text = "FLOWERS"
 
+[node name="Name2" type="Label" parent="."]
+offset_left = 322.0
+offset_top = 98.0
+offset_right = 502.0
+offset_bottom = 178.0
+theme_override_fonts/font = ExtResource("1_n0foe")
+theme_override_font_sizes/font_size = 64
+text = "BOUQUET"
+
 [node name="Flower_Box" type="ScrollContainer" parent="."]
 offset_left = 799.0
 offset_top = 153.0
