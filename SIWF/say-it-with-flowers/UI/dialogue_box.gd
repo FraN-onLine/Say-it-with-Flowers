@@ -126,7 +126,16 @@ func _on_Next_pressed() -> void:
 func _on_Assemble_pressed() -> void:
 	if _skip_typing_if_needed():
 		return
-	assemble_requested.emit(current_index)
+
+	var assemble_scene := preload("res://UI/AssembleMenu.tscn").instantiate()
+	get_tree().current_scene.add_child(assemble_scene)
+
+#	assemble_scene.assemble_finished.connect(
+	#	func(result: String):
+	#		var next_index = current_entry.get(result, -1)
+	#		_go_to_next(next_index)
+	#)
+
 
 
 func _on_Option1_pressed() -> void:
