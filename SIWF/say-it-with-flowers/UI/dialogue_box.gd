@@ -130,11 +130,11 @@ func _on_Assemble_pressed() -> void:
 	var assemble_scene := preload("res://UI/AssembleMenu.tscn").instantiate()
 	get_tree().current_scene.add_child(assemble_scene)
 
-#	assemble_scene.assemble_finished.connect(
-	#	func(result: String):
-	#		var next_index = current_entry.get(result, -1)
-	#		_go_to_next(next_index)
-	#)
+	assemble_scene.assemble_finished.connect(
+		func(result: String):
+			var next_index = current_entry.get(result, -1)
+			_go_to_next(next_index)
+	)
 
 
 

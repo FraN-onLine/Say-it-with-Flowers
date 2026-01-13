@@ -1,5 +1,9 @@
 extends CanvasLayer
 
+signal assemble_finished(result: String)
+
+@export var expected_arrangement: Array = []
+
 @onready var flower_list: VBoxContainer = $Flower_Box/FlowerList
 @onready var arrangement_slots := [
 	$Arrangement1,
@@ -41,3 +45,24 @@ func get_current_arrangement() -> Array:
 			current_arrangement.append(null)
 
 	return current_arrangement
+
+func evaluate_arrangement() -> String:
+	var current := get_current_arrangement()
+
+	if current == expected_arrangement:
+		return "success"
+
+	var correct := 0
+	for i in current.size():
+		if current[i] != null and current[i] == expected_arrangement[i]:
+			correct += 1
+
+	if correct == 0:
+		return "fail"
+
+	return "neutral"
+
+func _on_Assemble_pressed() -> void:
+	var result := evaluate_arrangement()
+	assemble_finished.emit(result)
+	queue_free()
