@@ -2,7 +2,8 @@ extends CanvasLayer
 
 signal assemble_finished(result: String)
 
-@export var expected_arrangement: Array = []
+#array of possible combis of 5
+var expected_arrangements: Array = []
 
 @onready var flower_list: VBoxContainer = $Flower_Box/FlowerList
 @onready var arrangement_slots := [
@@ -19,6 +20,9 @@ const FLOWER_ICON_SCENE := preload("res://Flowers/flower_icon.tscn")
 
 func _ready() -> void:
 	_load_unlocked_flowers()
+
+func set_expected_arrangement(arrangements: Array) -> void:
+	expected_arrangements = arrangements
 
 func _load_unlocked_flowers() -> void:
 	#delete all children first
@@ -48,19 +52,26 @@ func get_current_arrangement() -> Array:
 
 func evaluate_arrangement() -> String:
 	var current := get_current_arrangement()
+	var has_success := false
+	var has_neutral := false
 
-	if current == expected_arrangement:
-		return "success"
+	for k in expected_arrangements.size():
+		if current == expected_arrangements[k]:
+			has_success = true
 
-	var correct := 0
-	for i in current.size():
-		if current[i] != null and current[i] == expected_arrangement[i]:
-			correct += 1
+		var correct = 0
+		for i in current.size():
+			if current[i] != null and current[i] == expected_arrangements[i]:
+				correct += 1
 
-	if correct == 0:
-		return "fail"
-
-	return "neutral"
+		if correct != 0:
+			has_neutral = true
+	if has_success:
+		return "success_entry_index"
+	elif has_neutral:
+		return "neutral_entry_index"
+	return "failure_entry_index"
+	
 
 func _on_Assemble_pressed() -> void:
 	var result := evaluate_arrangement()

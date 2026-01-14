@@ -16,7 +16,16 @@ var order_sample = [
 	# For option type only
 	"option_1_text": null,
 	"option_2_text": null,
-	"option_next_indices": null
+	"option_next_indices": null,
+
+	#for assemble type only
+	"success_entry_index": null,
+	"failure_entry_index": null,
+	"neutral_entry_index": null,
+	#required flowers is an array of multiple arrays of 1-5 flowers that would be considered a success for this order
+	"required_flowers": null,
+	# unlock knowledge entry for a flower
+	"unlock_knowledge": null # pass an index then global knowledge manager handles it
 }
 ]
 
@@ -62,7 +71,11 @@ var dialogue = [
 		"name": "JOSA",
 		"portrait": preload("res://Assets/Characters/Josa.png"),
 		"text": "then, [b]Red Chrysanthemums![/b] Assemble something special for me, will you?",
-		"type": "assemble"
+		"type": "assemble",
+		"success_entry_index": 6,
+		"failure_entry_index": 7,
+		"neutral_entry_index": 8,
+		"required_flowers": [ ["Red Chrysanthemum"] ],
 	},
 	{
 		"text": "Thank you… this feels right.",
