@@ -29,7 +29,7 @@ var order_sample = [
 }
 ]
 
-var dialogue = [
+var josa_day_1 = [
 	{
 		"name": "JOSA",
 		"portrait": preload("res://Assets/Characters/Josa.png"),
@@ -91,4 +91,4 @@ var dialogue = [
 
 func _ready():
 	await get_tree().process_frame
-	get_tree().get_first_node_in_group("dialog_box").start(dialogue)
+	get_tree().get_first_node_in_group("dialog_box").start(josa_day_1)
